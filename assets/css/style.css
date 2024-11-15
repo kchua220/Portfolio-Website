@@ -116,7 +116,7 @@ body {
     display: flex;
   }
   
-  #header .social-links a {
+  #header .social-links a{
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -129,8 +129,26 @@ body {
     width: 40px;
     height: 40px;
   }
+
+  #header .social-links button {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(55, 54, 54, 0.1);
+    color: #f7f6f6;
+    
+    margin-left: 10px;
+    border-radius: 50rem;
+    border-color:transparent;
+    width: 80px;
+    height: 40px;
+  }
   
   #header .social-links a:hover {
+    background: #88d9dd;
+  }
+  #header .social-links button:hover {
     background: #88d9dd;
   }
   
@@ -151,6 +169,7 @@ body {
       align-items: center;
     }
   }
+  
   
   /*--------------------------------------------------------------
   # Navigation Menu

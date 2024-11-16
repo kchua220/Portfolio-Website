@@ -15,7 +15,7 @@ body {
     top: 0;
     height: 100vh;
   }
-  
+
   @media (min-width: 1024px) {
     body::before {
       background-attachment: fixed;

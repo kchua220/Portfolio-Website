@@ -600,3 +600,202 @@ body {
     }
   }
   
+/*--------------------------------------------------------------
+  # Expereince Section
+  --------------------------------------------------------------*/
+#experience {
+  padding: 60px 20px;
+  background-color: #904e18; /* Dark background for contrast */
+}
+
+#experience .section-title h2 {
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+#experience .icon-box {
+  background-color: #1d0e02; /* Subtle box background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  overflow: hidden;
+}
+
+#experience .icon-box:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#experience .icon-box h4 a {
+  color: #af4141; /* Highlighted link color */
+  text-decoration: none;
+}
+
+#experience .icon-box h4 a:hover {
+  color: #e57373; /* Lighter color on hover */
+}
+
+#experience .icon-box h5 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+#experience .icon-box span {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #aaaaaa;
+}
+
+#experience .icon-box ul {
+  list-style: none; /* Remove bullet points */
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+#experience .icon-box ul li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  padding-left: 20px;
+  position: relative;
+}
+
+#experience .icon-box ul li:before {
+  content: "•"; /* Custom bullet point */
+  color: #af4141;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#experience .icon-box img {
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  #experience .icon-box {
+    text-align: center;
+  }
+
+  #experience .icon-box img {
+    float: none;
+    margin: 0 auto 15px;
+    display: block;
+  }
+
+  #experience .icon-box h4,
+  #experience .icon-box h5 {
+    text-align: center;
+  }
+
+  #experience .icon-box ul {
+    text-align: left;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Education Section
+  --------------------------------------------------------------*/
+
+#education {
+  padding: 60px 20px;
+  background-color: #0f7b35; /* Background for the section */
+}
+
+#education .section-title h2 {
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+#education .icon-box {
+  background-color: #011b02; /* Subtle box background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  overflow: hidden;
+}
+
+#education .icon-box:hover {
+  transform: translateY(-5px); /* Hover effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#education .icon-box h4 a {
+  color: #e9bcf3; /* Highlighted link color */
+  text-decoration: none;
+}
+
+#education .icon-box h4 a:hover {
+  color: #f2d8fc; /* Lighter color on hover */
+}
+
+#education .icon-box h5 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+#education .icon-box span {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #aaaaaa;
+}
+
+#education .icon-box ul {
+  list-style: none; /* Remove bullet points */
+  padding-left: 0;
+  margin-top: 15px;
+  columns: 2; /* Split the list into two columns */
+  column-gap: 20px;
+}
+
+#education .icon-box ul li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  padding-left: 20px;
+  position: relative;
+}
+
+#education .icon-box ul li:before {
+  content: "•"; /* Custom bullet point */
+  color: #e9bcf3; /* Matches section link color */
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#education .icon-box img {
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  #education .icon-box {
+    text-align: center;
+  }
+
+  #education .icon-box
+
+
+  

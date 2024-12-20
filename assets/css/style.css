@@ -487,478 +487,116 @@ body {
   /*--------------------------------------------------------------
   # Skills
   --------------------------------------------------------------*/
-  .skills .progress {
-    height: 50px;
-    display: block;
-    background: none;
-  }
+  /* Skills Section */
+.skills {
+  padding: 40px 20px;
+  background-color: #2d2f36;
+}
+
+.skills .section-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.skills-category h4 {
+  color: #fff;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f8f9f5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Spacing between items */
+  justify-items: center; /* Center-align icons */
+}
+
+.skill-item {
+  text-align: center;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* Ensures consistent sizing */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-item img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.skill-item figcaption {
+  font-size: 14px;
+  color: #aceeed; /* Match theme color */
+  font-family: "Poppins", sans-serif;
+}
   
-  .skills .progress .skill {
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-  }
+
   
-  .skills .progress .skill .val {
-    float: right;
-    font-style: normal;
-  }
-  
-  .skills .progress-bar-wrap {
-    background: rgba(255, 255, 255, 0.15);
-  }
-  
-  .skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: .9s;
-    background-color: #1c7d32;
-  }
-  
-  /*--------------------------------------------------------------
-  # Interests
+/*--------------------------------------------------------------
+  # Project Section
   --------------------------------------------------------------*/
-  .interests .icon-box {
-    display: flex;
-    align-items: center;
+
+  .projects-section {
+    background-color: #2d2f39; /* Match the background color */
+    padding: 40px 20px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+  }
+  
+  .project-card {
+    background-color: #1f2230; /* Card background */
     padding: 20px;
-    background: #09203a;
-    transition: ease-in-out 0.3s;
-  }
-  
-  
-  .interests .icon-box i {
-    font-size: 32px;
-    padding-right: 10px;
-    line-height: 1;
-  }
-  
-  .interests .icon-box h3 {
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-size: 16px;
-    color: #fff;
-  }
-  
-  .interests .icon-box:hover {
-    background: #ececedeb;
-  }
-  
-  /*--------------------------------------------------------------
-  # Testimonials
-  --------------------------------------------------------------*/
-  .testimonials .testimonial-item {
-    box-sizing: content-box;
-    min-height: 320px;
-  }
-  
-  .testimonials .testimonial-item .testimonial-img {
-    width: 90px;
-    border-radius: 50%;
-    margin: -40px 0 0 40px;
-    position: relative;
-    z-index: 2;
-    border: 6px solid rgba(255, 255, 255, 0.12);
-  }
-  
-  .testimonials .testimonial-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px 45px;
-    color: #fff;
-  }
-  
-  .testimonials .testimonial-item h4 {
-    font-size: 14px;
-    color: #999;
-    margin: 0 0 0 45px;
-  }
-  
-  .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 26px;
-  }
-  
-  .testimonials .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-  }
-  
-  .testimonials .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-  }
-  
-  .testimonials .testimonial-item p {
-    font-style: italic;
-    margin: 0 15px 0 15px;
-    padding: 20px 20px 60px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    position: relative;
-    border-radius: 6px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .testimonials .owl-nav, .testimonials .owl-dots {
-    margin-top: 5px;
+    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .testimonials .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3) !important;
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
-  .testimonials .owl-dot.active {
-    background-color: #1c7d32 !important;
-  }
-  
-  @media (max-width: 767px) {
-    .testimonials {
-      margin: 30px 10px;
-    }
-  }
-  
-  /*--------------------------------------------------------------
-  # Resume
-  --------------------------------------------------------------*/
-  .resume .resume-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  
-  .resume .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-  }
-  
-  .resume .resume-item h4 {
-    line-height: 18px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: #1c7d32;
-    margin-bottom: 10px;
-  }
-  
-  .resume .resume-item h5 {
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 5px 15px;
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .resume .resume-item ul {
-    padding-left: 20px;
-  }
-  
-  .resume .resume-item ul li {
-    padding-bottom: 10px;
-  }
-  
-  .resume .resume-item:last-child {
-    padding-bottom: 0;
-  }
-  
-  .resume .resume-item::before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    left: -9px;
-    top: 0;
-    background: #9e7f25;
-    border: 2px solid #9e7f25;
-  }
-  
-  /*--------------------------------------------------------------
-  # Services
-  --------------------------------------------------------------*/
-  .services .icon-box {
-    text-align: center;
-    background: #09203a;
-    padding: 40px 40px;
-    transition: all ease-in-out 0.3s;
-    margin: 10px;
-  }
-  
-  .services .icon-box .icon {
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    background: #1c7d32;
-    border-radius: 5px;
-    transition: all .3s ease-out 0s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    transform-style: preserve-3d;
-  }
-  
-  .services .icon-box .icon i {
-    color: #fff;
-    font-size: 28px;
-  }
-  
-  .services .icon-box .icon::before {
-    position: absolute;
-    content: '';
-    left: -8px;
-    top: -8px;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 5px;
-    transition: all .3s ease-out 0s;
-    transform: translateZ(-1px);
-  }
-  
-  .services .icon-box h4 {
-    font-weight: 700;
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 15px;
-    font-size: 24px;
   }
   
-  .services .icon-box h4 a {
-    color: #fff;
+  .project-card h5 {
+    color: #aceeed;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   
-  .services .icon-box p {
-    line-height: 24px;
+  .project-card p {
+    color: #f0f0f0;
     font-size: 14px;
-    margin-bottom: 0;
+    line-height: 1.6;
   }
   
-  .services .icon-box:hover {
-    background: #042e5f;
-    border-color: #12d640;
-  }
-  
-  .services .icon-box:hover .icon {
-    background: #fff;
-  }
-  
-  .services .icon-box:hover .icon i {
-    color: #12d640;
-  }
-  
-  .services .icon-box:hover .icon::before {
-    background: #35e888;
-  }
-  
-  .services .icon-box:hover h4 a, .services .icon-box:hover p {
-    color: #12d640;
-  }
-  
-  /*--------------------------------------------------------------
-  # Portfolio
-  --------------------------------------------------------------*/
-  .portfolio .portfolio-item {
-    margin-bottom: 30px;
-  }
-  
-  .portfolio #portfolio-flters {
-    padding: 0;
-    margin: 0 auto 15px auto;
-    list-style: none;
-    text-align: center;
-    border-radius: 50px;
-    padding: 2px 15px;
-  }
-  
-  .portfolio #portfolio-flters li {
-    cursor: pointer;
-    display: inline-block;
-    padding: 8px 16px 10px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 0 3px 10px 3px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 4px;
-  }
-  
-  .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-    background: #12d640;
-  }
-  
-  .portfolio #portfolio-flters li:last-child {
-    margin-right: 0;
-  }
-  
-  .portfolio .portfolio-wrap {
-    transition: 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  .portfolio .portfolio-wrap::before {
-    content: "";
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    top: 30px;
-    bottom: 30px;
-    transition: all ease-in-out 0.3s;
-    z-index: 2;
-    opacity: 0;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    z-index: 3;
-    transition: all ease-in-out 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info::before {
-    display: block;
-    content: "";
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    top: 35px;
-    left: 35px;
-    border-top: 3px solid #fff;
-    border-left: 3px solid #fff;
-    transition: all 0.5s ease 0s;
-    z-index: 9994;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info::after {
-    display: block;
-    content: "";
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    bottom: 35px;
-    right: 35px;
-    border-bottom: 3px solid #fff;
-    border-right: 3px solid #fff;
-    transition: all 0.5s ease 0s;
-    z-index: 9994;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info h4 {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info p {
-    color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links {
-    text-align: center;
-    z-index: 4;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links a {
-    color: #fff;
-    margin: 0 2px;
-    font-size: 28px;
-    display: inline-block;
-    transition: 0.3s;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links a:hover {
-    color: #63eda3;
-  }
-  
-  .portfolio .portfolio-wrap:hover::before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 1;
-  }
-  
-  .portfolio .portfolio-wrap:hover .portfolio-info {
-    opacity: 1;
-  }
-  
-  .portfolio .portfolio-wrap:hover .portfolio-info::before {
-    top: 15px;
-    left: 15px;
-  }
-  
-  .portfolio .portfolio-wrap:hover .portfolio-info::after {
-    bottom: 15px;
-    right: 15px;
-  }
-  
-
-  /*--------------------------------------------------------------
-  # Credits
-  --------------------------------------------------------------*/
-  .credits {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    font-size: 13px;
-    color: #fff;
-    z-index: 1;
-  }
-  
-  .credits a {
-    color: #1c7d32;
-    transition: 0.3s;
-  }
-  
-  .credits a:hover {
-    color: #fff;
-  }
-  
-  @media (max-width: 992px) {
-    .credits {
-      left: 50%;
-      right: 0;
-      transform: translateX(-50%);
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr; /* Single column for small screens */
     }
   }
-
   

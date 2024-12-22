@@ -390,15 +390,7 @@ body {
     color: #121212;
     font-family: "Poppins", sans-serif;
   }
-  
-  .section-title h2::after {
-    content: "";
-    width: 120px;
-    height: 1px;
-    display: inline-block;
-    background: #0a0a0a;
-    margin: 5px 10px;
-  }
+
   
   .section-title p {
     margin: 0;
@@ -413,6 +405,7 @@ body {
   /*--------------------------------------------------------------
   # About
   --------------------------------------------------------------*/
+  
   .about-me .content h3 {
     font-weight: 700;
     font-size: 26px;
@@ -444,60 +437,20 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Counts
-  --------------------------------------------------------------*/
-  .counts {
-    padding: 70px 0 60px;
-  }
-  
-  .counts .count-box {
-    padding: 30px 30px 25px 30px;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.08);
-  }
-  
-  .counts .count-box i {
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 12px;
-    color: #1c7d32;
-    border-radius: 50px;
-  }
-  
-  .counts .count-box span {
-    font-size: 36px;
-    display: block;
-    font-weight: 600;
-    color: #fff;
-  }
-  
-  .counts .count-box p {
-    padding: 0;
-    margin: 0;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-  }
-  
-  /*--------------------------------------------------------------
   # Skills
   --------------------------------------------------------------*/
   /* Skills Section */
 .skills {
   padding: 40px 20px;
-  background-color: #2d2f36;
+  background-color: #704d7c;
 }
 
 .skills .section-title {
   color: #fff;
   text-align: center;
   margin-bottom: 40px;
-  font-size: 28px;
+  margin-top: -40px;
+  font-size: 30px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -506,7 +459,7 @@ body {
 }
 
 .skills-category h4 {
-  color: #fff;
+  color: #d9d7b9;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -517,7 +470,7 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
   gap: 20px; /* Spacing between items */
   justify-items: center; /* Center-align icons */
 }
@@ -539,8 +492,8 @@ body {
 }
 
 .skill-item figcaption {
-  font-size: 14px;
-  color: #aceeed; /* Match theme color */
+  font-size: 17px;
+  color: #cfecec; /* Match theme color */
   font-family: "Poppins", sans-serif;
 }
   
@@ -549,15 +502,16 @@ body {
 /*--------------------------------------------------------------
   # Project Section
   --------------------------------------------------------------*/
-
+ 
+  
   .projects-section {
-    background-color: #2d2f39; /* Match the background color */
-    padding: 40px 20px;
+    background-color: #8c91a8; /* Match the background color */
+    padding: 40px 40px;
   }
   
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between items */
   }
   
@@ -584,8 +538,44 @@ body {
   
   .project-card h5 {
     color: #aceeed;
-    font-size: 18px;
+    font-size: 23px;
     margin-bottom: 10px;
+  }
+  
+  .project-card .group-label {
+    display: inline-block;
+    background-color: #ffdd57; /* Distinct yellow for group projects */
+    color: #1f2230; /* Contrast text color */
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px; /* Add spacing below the label */
+  }
+
+  .project-card .individual-label {
+    display: inline-block;
+    background-color: #d1db84; /* Green for individual projects */
+    color: #1f2230; /* Dark text for contrast */
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px; /* Space below the label */
+  }
+  
+  .project-card .group-label {
+    display: inline-block;
+    background-color: #b5e68d; /* Yellow for group projects */
+    color: #1f2230; /* Dark text for contrast */
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px; /* Space below the label */
   }
   
   .project-card p {
@@ -596,16 +586,18 @@ body {
   
   @media (max-width: 768px) {
     .projects-grid {
-      grid-template-columns: 1fr; /* Single column for small screens */
+      grid-template-columns: 1fr;
     }
   }
+
+
   
 /*--------------------------------------------------------------
   # Expereince Section
   --------------------------------------------------------------*/
 #experience {
   padding: 60px 20px;
-  background-color: #904e18; /* Dark background for contrast */
+  background-color: #74c283; /* Dark background for contrast */
 }
 
 #experience .section-title h2 {
@@ -613,11 +605,12 @@ body {
   color: #ffffff;
   text-align: center;
   margin-bottom: 40px;
+  margin-top: -40px;
   font-family: "Poppins", sans-serif;
 }
 
 #experience .icon-box {
-  background-color: #1d0e02; /* Subtle box background */
+  background-color: #043c0d; /* Subtle box background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px;
   margin-bottom: 20px;
@@ -671,7 +664,7 @@ body {
 
 #experience .icon-box ul li:before {
   content: "•"; /* Custom bullet point */
-  color: #af4141;
+  color: #c4bfbf;
   font-size: 16px;
   position: absolute;
   left: 0;
@@ -710,20 +703,21 @@ body {
 
 #education {
   padding: 60px 20px;
-  background-color: #0f7b35; /* Background for the section */
+  background-color: #a2bfde; /* Background for the section */
 }
 
 #education .section-title h2 {
-  font-size: 28px;
+  font-size: 30px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 40px;
+  margin-top: -40px;
   font-family: "Poppins", sans-serif;
 }
 
 #education .icon-box {
-  background-color: #011b02; /* Subtle box background */
-  border-radius: 10px; /* Rounded corners */
+  background-color: #072371; /* Subtle box background */
+  border-radius: 30px; /* Rounded corners */
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -761,7 +755,7 @@ body {
 #education .icon-box ul {
   list-style: none; /* Remove bullet points */
   padding-left: 0;
-  margin-top: 15px;
+  margin-top: px;
   columns: 2; /* Split the list into two columns */
   column-gap: 20px;
 }
@@ -778,7 +772,7 @@ body {
 
 #education .icon-box ul li:before {
   content: "•"; /* Custom bullet point */
-  color: #e9bcf3; /* Matches section link color */
+  color: #d6ccc2;
   font-size: 16px;
   position: absolute;
   left: 0;
@@ -796,6 +790,4 @@ body {
   }
 
   #education .icon-box
-
-
   

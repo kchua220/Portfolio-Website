@@ -442,7 +442,7 @@ body {
   /* Skills Section */
 .skills {
   padding: 40px 20px;
-  background-color: #704d7c;
+  background-color: #be9050;
 }
 
 .skills .section-title {
@@ -459,11 +459,11 @@ body {
 }
 
 .skills-category h4 {
-  color: #d9d7b9;
+  color: #13130a;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
-  border-bottom: 2px solid #f8f9f5;
+  border-bottom: 2px solid #850505;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -493,7 +493,7 @@ body {
 
 .skill-item figcaption {
   font-size: 17px;
-  color: #cfecec; /* Match theme color */
+  color: #222828; /* Match theme color */
   font-family: "Poppins", sans-serif;
 }
   

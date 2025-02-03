@@ -10,7 +10,7 @@ const Testimonials = () => {
         <section id='testimonials'>
             <div className="section__wrapper">
                 <div className="section__header">
-                    <h2 className="shine">Experiences</h2>
+                    <h2 className="shine">Certificates/Awards</h2>
                 </div>
                 <Swiper
                     slidesPerView={1}

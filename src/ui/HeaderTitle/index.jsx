@@ -3,7 +3,7 @@ const HeaderTitle = () => {
   return (
     <svg
       width="614"
-      height="350"
+      height="390"
       viewBox="0 0 614 390"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -35,5 +35,5 @@ const HeaderTitle = () => {
     </svg>
   );
 };
-x
+
 export default HeaderTitle;

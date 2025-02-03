@@ -37,7 +37,8 @@
    content: "";
    height: 8px;
    width: 8px;
-   background: linear-gradient(260deg, 
+   background: linear-gradient(
+    260deg, 
    var(--color-dark) 0%, 
    var(--color-primary) 100%);
 

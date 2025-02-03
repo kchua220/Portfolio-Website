@@ -42,7 +42,7 @@ const Navbar = () => {
             </aside>
             <div className="flex__center buttons__wrapper">
                 <Link to="contact" className="btn flex__center hire__btn">
-                Hire Me <div className="flex__center icon">
+                Contact Me <div className="flex__center icon">
                     <FaArrowUpRightFromSquare />
                 </div>
                 </Link>

@@ -5,10 +5,53 @@
     <link rel="icon" type="image/svg+xml" href="/Portfolio-Website/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kevin Chuang - Portfolio</title>
-    <script type="module" crossorigin src="/Portfolio-Website/assets/index-C_HiLz15.js"></script>
-    <link rel="stylesheet" crossorigin href="/Portfolio-Website/assets/index-DREyC8ah.css">
+    <script type="module" crossorigin src="/Portfolio-Website/assets/index-DMXAx-4a.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portfolio-Website/assets/index-Cs05evNn.css">
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loading-body">
+        <span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="loading-base">
+          <span></span>
+          <div class="loading-face"></div>
+        </div>
+      </div>
+
+      <div class="loading-longfazers">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- React App Container -->
+    <div id="root" style="opacity: 0;"></div>
+
+    <script>
+      window.onload = function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const rootDiv = document.getElementById("root");
+    
+        // Start fade-out for loading screen and fade-in for React app
+        setTimeout(() => {
+          loadingScreen.style.opacity = "0"; // Smooth fade-out
+          rootDiv.style.opacity = "1"; // Smooth fade-in (overlap starts here)
+        }, 1500); // Delay of 1.5s before starting the transition
+    
+        // Completely remove loading screen after fade-out ends
+        setTimeout(() => {
+          loadingScreen.style.display = "none";
+        }, 3000); // Allow 1.5s for the opacity transition to finish
+      };
+    </script>
+
   </body>
 </html>

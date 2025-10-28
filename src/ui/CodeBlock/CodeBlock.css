@@ -3,7 +3,7 @@
     box-shadow: var(--card-primary-shadow);
     overflow: hidden;
     position: relative;
-    height: fit-content;
+    height: 350px;
 }
 
 .code__block::after{
@@ -12,7 +12,7 @@
     bottom: 0;
     left:0;
     width: 100%;
-    height: 80%;
+    height: 60%;
     background: linear-gradient(to bottom, transparent, var(--color-ui-1));
 }
 

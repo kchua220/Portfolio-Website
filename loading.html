@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #171717">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Screen</title>
+    <link rel="stylesheet" href="/loading-styles.css" />
+  </head>
+  <body>
+    <!-- Loading Screen Content -->
+    <div id="loading-screen">
+      <div class="loading-body">
+        <span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="loading-base">
+          <span></span>
+          <div class="loading-face"></div>
+        </div>
+      </div>
+
+      <div class="loading-longfazers">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <script>
+      // Redirect to the main index.html after the loading animation
+      setTimeout(() => {
+        window.location.href = "/index.html"; 
+      }, 2000); 
+    </script>
+  </body>
+</html>

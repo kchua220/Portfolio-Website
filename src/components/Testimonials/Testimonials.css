@@ -1,11 +1,11 @@
-#testimonials .testimonial{
+#experience .testimonial{
     text-align: center;
     padding: 60px 40px;
     border-radius: var(--border-radius-3);
     clip-path: var(--polygon);
 }
 
-#testimonials .avatar {
+#experience .avatar {
     width:10rem;
     height: 10rem;
     overflow: hidden;
@@ -15,7 +15,25 @@
     box-shadow: 5px 10px 20px rgba(1,1,1,0.329);
 }
 
-#testimonials .review{
-    font-weight: 400;
+#experience .review{
+    font-weight: 650;
+    font-size: 20px;
+    color: rgb(185, 214, 178);
+}
+
+#experience .name{
+    font-weight: 800;
+    font-size: 23.5px;
+}
+
+#experience .description{
+    font-weight: 600;
     font-size: 15px;
 }
+
+#experience .location{
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(152, 197, 214);
+}
+

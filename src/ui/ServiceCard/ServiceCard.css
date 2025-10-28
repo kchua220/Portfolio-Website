@@ -138,3 +138,18 @@
 .service__card:hover .ball5{
     transform: translate3d(0,0,120px);
 }
+
+.service__card .discription2{
+    color: rgba(var(--color-primary-rgb), 3);
+    font-size: 18px;
+}
+
+.service__card .courses{
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: bisque;
+}
+
+.service__card .course_list{
+    font-size: 15px;
+}

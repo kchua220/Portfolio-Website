@@ -7,10 +7,10 @@ import { Autoplay } from "swiper/modules";
 
 const Testimonials = () => {
     return (
-        <section id='testimonials'>
+        <section id='experience'>
             <div className="section__wrapper">
                 <div className="section__header">
-                    <h2 className="shine">Certificates/Awards</h2>
+                    <h2 className="shine">Experiences</h2>
                 </div>
                 <Swiper
                     slidesPerView={1}
@@ -22,13 +22,15 @@ const Testimonials = () => {
                     breakpoints={{700:{slidesPerView:2}}}
                     >
 
-                    {testimonials.map(({avatar, name, review},index)=>(
+                    {testimonials.map(({avatar, name, review, description, location},index)=>(
                         <SwiperSlide className="card testimonial" key={index}>
                           <div className="avatar">
                             <img src={avatar} alt="" />
                          </div>
                          <h3 className="name">{name}</h3>
-                         <p className="text__muted review">{review}</p>
+                         <p className="review">{review}</p>
+                         <p className="description">{description}</p>
+                         <p className="location">{location}</p>
                         </SwiperSlide>
                     ))}
                 </Swiper>

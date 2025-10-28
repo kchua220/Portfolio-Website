@@ -1,6 +1,8 @@
 .header__title {
   max-width: 100%;
   max-height: 100%;
+  margin-left: 3rem;
+  margin-top: 3rem;
 }
 .header__title #cursor,
 .header__title #text {
@@ -8,7 +10,7 @@
 }
 .header__title #cursor {
   overflow: visible;
-  transform: translate3d(300px, 0, 0) scale(1);
+  transform: translate3d(300px, 100px, 0) scale(1);
   transform-origin: center center;
   transform-box: fill-box;
   animation: cursor 5s ease infinite alternate;
@@ -30,7 +32,7 @@
   /* clique */
   65% {
     opacity: 1;
-    transform: translate3d(-200px, -200px, 0) scale(0.95);
+    transform: translate3d(-200px, -200px, 0) scale(1);
   }
   70% {
     opacity: 1;

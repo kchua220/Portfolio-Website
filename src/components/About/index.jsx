@@ -1,6 +1,6 @@
 import Hole from "../../ui/Hole";
 import "./About.css";
-import { skills } from "../../data";
+import { hobbies } from "../../data";
 import CardUi from "../../assets/CardUi";
 
 
@@ -11,9 +11,9 @@ const About = () => {
             <div className="card section__wrapper">
                 <Hole />
                 <div className="column left-column">
-                    <h3 className="skill__title">My Hobbies</h3>
+                    <h3 className="skill__title">My Hobbies!</h3>
                     <div className="skills__container">
-                        {skills.map((skill, index) => (
+                        {hobbies.map((skill, index) => (
                             <div className = "flex skill__group" key={index}>
                                 {skill.data.map((list,key)=> (
                                     <div className="blur__overlay flex__center skill" key={key}>
@@ -33,7 +33,8 @@ const About = () => {
                         I am <span className = "yay"> He-Chun (Kevin) Chuang</span>
                     </h1>
                     <h1 className="text__muted description">
-                    Welcome to my digital space! I am a driven and passionate junior at the University of Washington with an unwavering curiosity and love for Machine Learning, data analytics, and software engineering. I thrive on solving real-world challenges and sparking innovation while embracing collaboration and growth as a resilient, goal-oriented leader who is all about leveraging technology for meaningful impact! Feel free to connect with me!
+                    Welcome to my digital space! I am  a driven upcoming graduate from the University of Washington with an unwavering curiosity and love for software systems, data science/engineering, and AI. I thrive on learning and solving real-world challenges while sparking innovation through collaboration and continuous growth. As a resilient and goal-oriented team player, I'm committed to building solutions that create a meaningful impact.
+
                     </h1>
                 </div>
             </div>

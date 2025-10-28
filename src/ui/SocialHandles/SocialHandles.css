@@ -14,7 +14,7 @@
 }
 
 .social__handles__container .tooltip{
-    justify-content: flex-start;
+    
     gap: 5px;
     position: absolute;
     top: 0;
@@ -53,4 +53,22 @@
     visibility: visible;
     pointer-events: auto;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.social__handles__container .social__handle {
+    width: 50px;  
+    height: 50px; 
+    font-size: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__handles__container {
+    gap: 3rem; 
+    margin-left: 7rem;
+    position: relative;
+    top: -60px;
+    display: flex;
+    align-items: center;
 }

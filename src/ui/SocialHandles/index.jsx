@@ -1,25 +1,23 @@
-
 import "./SocialHandles.css";
-import {socialHandles} from "../../data";
+import { socialHandles } from "../../data";
 
 const SocialHandles = () => {
     return (
         <div className="social__handles__container"> 
-             {
-                socialHandles.map((media,index) => (
-                    <a 
-                    href="(media.link)" 
+             {socialHandles.map((media, index) => (
+                <a 
+                    href={media.link}
                     target="_blank" 
+                    rel="noopener noreferrer"
                     className="icon_container social__handle"
                     key={index}
                 >
                     <span className="flex__center tooltip">
-                        {media.icon} {media.name}
+                        {media.name}
                     </span>
-                        {media.icon}
-                    </a>
-                ))
-             }
+                    {media.icon}
+                </a>
+            ))}
         </div>
     );
 };

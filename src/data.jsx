@@ -1,5 +1,4 @@
 import { FaPaintBrush } from "react-icons/fa";
-import { SiFiverr } from "react-icons/si";
 import { AiFillBook, AiFillContainer, AiFillGithub, AiFillGoogleCircle, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { FaCodeCompare } from "react-icons/fa6";
 import { GiIdea } from "react-icons/gi";

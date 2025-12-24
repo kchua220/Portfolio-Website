@@ -1,50 +1,372 @@
-#header{
-    overflow: hidden;
-    position: relative
-}
-
-#header .breath__circle{
-    position: absolute;
-    right:0;
-    z-index: 1;
-}
-
-#header .grid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+#header {
     position: relative;
-    gap:1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Aesthetic Blur Orbs Background */
+.header__decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.blur__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    animation: float__smooth 15s ease-in-out infinite;
+}
+
+.orb1 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    top: -10%;
+    right: -5%;
+    animation-delay: 0s;
+}
+
+.orb2 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    bottom: -10%;
+    left: -5%;
+    animation-delay: -5s;
+}
+
+.orb3 {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -10s;
+}
+
+@keyframes float__smooth {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    33% {
+        transform: translate(50px, -50px);
+    }
+    66% {
+        transform: translate(-30px, 30px);
+    }
+}
+
+/* Shooting Meteors */
+.meteor {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    animation: meteor__fall 4s linear infinite;
+    opacity: 0;
+}
+
+.meteor::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.meteor1 {
+    top: 5%;
+    right: 10%;
+    background: #667eea;
+    box-shadow: 0 0 15px 3px #667eea;
+    animation-delay: 0s;
+}
+
+.meteor1::before {
+    background: linear-gradient(90deg, #667eea, transparent);
+    animation: meteor__fall1 4s linear infinite;
+}
+
+.meteor2 {
+    top: 15%;
+    right: 60%;
+    background: #f093fb;
+    box-shadow: 0 0 15px 3px #f093fb;
+    animation-delay: 1.2s;
+}
+
+.meteor2::before {
+    background: linear-gradient(90deg, #f093fb, transparent);
+    animation: meteor__fall2 4s linear infinite;
+}
+
+.meteor3 {
+    top: 25%;
+    right: 85%;
+    background: #4facfe;
+    box-shadow: 0 0 15px 3px #4facfe;
+    animation-delay: 2.4s;
+}
+
+.meteor3::before {
+    background: linear-gradient(90deg, #4facfe, transparent);
+    animation: meteor__fall3 4s linear infinite;
+}
+
+.meteor4 {
+    top: 40%;
+    right: 35%;
+    background: #ffd166;
+    box-shadow: 0 0 15px 3px #ffd166;
+    animation-delay: 3.6s;
+}
+
+.meteor4::before {
+    background: linear-gradient(90deg, #ffd166, transparent);
+    animation: meteor__fall4 4s linear infinite;
+}
+
+@keyframes meteor__fall1 {
+    0% {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-400px, 400px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes meteor__fall2 {
+    0% {
+        transform: translate(0, 0) rotate(-60deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-350px, 450px) rotate(-60deg);
+        opacity: 0;
+    }
+}
+
+@keyframes meteor__fall3 {
+    0% {
+        transform: translate(0, 0) rotate(-30deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-300px, 350px) rotate(-30deg);
+        opacity: 0;
+    }
+}
+
+@keyframes meteor__fall4 {
+    0% {
+        transform: translate(0, 0) rotate(-50deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-450px, 500px) rotate(-50deg);
+        opacity: 0;
+    }
+}
+
+@keyframes meteor__fall {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Content Layout */
+#header .section__wrapper {
+    position: relative;
     z-index: 2;
+    width: 100%;
 }
 
-#header .grid.upper{
-    grid-template-columns: auto 400px;
+#header .header__content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-#header .description{
-    margin-bottom: 10px;
+/* Left Side - Text */
+#header .header__left {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
 }
 
-#header .social__handles__container{
-    margin-top: 50px;
+#header .name__section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-#header .profiel__photo{
-    object-fit: contain;
+#header .header__name {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #a8b8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -2px;
+    text-align: left;
+    padding-bottom: 5px;
 }
 
-@media (max-width:768px){
-    #header .grid,
-    #header .grid-upper {
-        grid-template-columns: 100%;
+#header .header__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+
+#header .header__education {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Social Handles */
+#header .social__handles__container {
+    margin: 0 !important;
+    padding: 0;
+}
+
+/* Right Side - Profile Photo */
+#header .header__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .profile__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+#header .profile__photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3));
+    animation: gentle__float 6s ease-in-out infinite;
+}
+
+@keyframes gentle__float {
+    0%, 100% {
+        transform: translateY(0px);
     }
-    #header .grid.upper .column:first-child{
-        height: 200px;
+    50% {
+        transform: translateY(-20px);
     }
-    #header .description{
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #header .header__content {
+        gap: 60px;
+    }
+
+    #header .header__name {
+        font-size: 64px;
+    }
+
+    #header .header__title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+
+    #header .header__content {
+        grid-template-columns: 1fr;
+        gap: 60px;
         text-align: center;
     }
-    #header .social__handles__container{
-        justify-content: center;
+
+    #header .header__left {
+        gap: 40px;
+        align-items: center;
+    }
+
+    #header .header__name {
+        font-size: 48px;
+    }
+
+    #header .header__title {
+        font-size: 18px;
+    }
+
+    #header .header__education {
+        font-size: 14px;
+    }
+
+    #header .profile__wrapper {
+        max-width: 350px;
+    }
+
+    .orb1, .orb2, .orb3 {
+        filter: blur(60px);
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 480px) {
+    #header .header__name {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    #header .header__title {
+        font-size: 16px;
+    }
+
+    #header .profile__wrapper {
+        max-width: 280px;
     }
 }

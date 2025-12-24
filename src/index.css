@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #667eea 0%,
+    #764ba2 25%,
+    #f093fb 50%,
+    #4facfe 75%,
+    #00f2fe 100%
+  ) !important;
+  border-radius: 10px !important;
+  border: 2px solid #0a0a0a !important;
+  box-shadow: 
+    0 0 10px rgba(102, 126, 234, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.2) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #00f2fe 0%,
+    #4facfe 25%,
+    #f093fb 50%,
+    #764ba2 75%,
+    #667eea 100%
+  ) !important;
+  box-shadow: 
+    0 0 20px rgba(102, 126, 234, 0.8),
+    inset 0 0 15px rgba(255, 255, 255, 0.4) !important;
+}
+
 :root {
   --color-primary: #2563eb;
   --color-primary-rgb: 37, 99, 235;
@@ -25,8 +65,8 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
   --border-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
-    /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
-    /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
     0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
   --card-primary-shadow: var(--border-shadow),
     0 0 30px rgba(var(--color-primary-rgb), 0.03);
@@ -49,6 +89,7 @@
     0% 50px
   );
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -56,16 +97,16 @@
   border: none;
   outline: none;
 }
+
 html,
 body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) transparent;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
   color: var(--color-text);
   background: var(--color-ui-1);
   position: relative;
 }
+
 body {
   width: 100%;
   max-width: 2000px;
@@ -75,6 +116,7 @@ body {
   overflow: hidden;
   overflow-y: auto;
 }
+
 a {
   display: block;
   color: var(--color-text);
@@ -89,6 +131,7 @@ h4,
 h5 {
   font-weight: 500;
 }
+
 img {
   min-height: 100%;
   width: 100%;
@@ -108,9 +151,11 @@ img {
     rgba(100, 100, 100, 0.2) 100%
   );
 }
+
 .flex {
   display: flex;
 }
+
 .flex__center {
   display: flex;
   align-items: center;
@@ -172,6 +217,7 @@ img {
   background-size: 50px;
   animation: zezzz 5s infinite;
 }
+
 @keyframes zezzz {
   0%,
   10% {
@@ -188,9 +234,11 @@ img {
 .color__primary {
   color: var(--color-primary);
 }
+
 .text__muted {
   color: var(--color-muted);
 }
+
 .g-text {
   background: linear-gradient(
     to right,
@@ -201,6 +249,7 @@ img {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .line__clamp__1 {
   display: -webkit-box;
   text-overflow: ellipsis;
@@ -208,11 +257,13 @@ img {
   -webkit-line-clamp: 1;
   line-clamp: 1;
 }
+
 .section__wrapper {
   max-width: 1190px;
   margin: auto;
   padding: 80px 20px;
 }
+
 .icon__container {
   width: 2.5rem;
   height: 2.5rem;
@@ -229,11 +280,13 @@ img {
   transition: var(--transition);
   color: var(--color-muted);
 }
+
 .icon__container:hover {
   transform: scale(1.1);
   background: var(--color-ui-2);
   color: var(--color-white);
 }
+
 .blur__overlay {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);

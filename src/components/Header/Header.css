@@ -226,7 +226,7 @@
 #header .header__left {
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 120px;
 }
 
 #header .name__section {

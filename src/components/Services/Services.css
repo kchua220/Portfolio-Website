@@ -1,21 +1,190 @@
 #education {
+    position: relative;
     overflow: hidden;
+    padding: 100px 0;
+    background: linear-gradient(180deg, #1a1a1a 0%, #141414 50%, #1a1a1a 100%);
 }
 
-#education .services__group{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+/* Animated Background Elements */
+.education__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
 }
 
-@media(max-width: 900px){
-    #education .services__group{
-        grid-template-columns: repeat(2, 1fr);
+.education__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: floatEducation 15s ease-in-out infinite;
+}
+
+.education__orb--1 {
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(75, 150, 210, 0.6) 0%, transparent 70%);
+    top: -25%;
+    right: -15%;
+    animation-delay: 0s;
+}
+
+.education__orb--2 {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(218, 165, 32, 0.5) 0%, transparent 70%);
+    bottom: -25%;
+    left: -15%;
+    animation-delay: 5s;
+}
+
+.education__orb--3 {
+    width: 750px;
+    height: 750px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.45) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 10s;
+}
+
+@keyframes floatEducation {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(100px, -100px) scale(1.3);
     }
 }
 
-@media (max-width: 600px){
-    #education .services__group{
-        grid-template-columns: 100%;
+@keyframes floatEducation {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(80px, -80px) scale(1.2);
+    }
+    50% {
+        transform: translate(100px, -100px) scale(1.3);
+    }
+    75% {
+        transform: translate(-60px, 60px) scale(0.9);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Section Header */
+.section__header {
+    text-align: center;
+    margin-top:-120px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.education__title {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #a8b8ff 50%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+}
+
+.education__subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Services Grid - 2x2 Layout for 4 schools */
+#education .services__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Stagger animation for cards */
+#education .services__group > :nth-child(1) {
+    animation: cardFadeIn 0.8s ease-out 0.1s backwards;
+}
+
+#education .services__group > :nth-child(2) {
+    animation: cardFadeIn 0.8s ease-out 0.2s backwards;
+}
+
+#education .services__group > :nth-child(3) {
+    animation: cardFadeIn 0.8s ease-out 0.3s backwards;
+}
+
+#education .services__group > :nth-child(4) {
+    animation: cardFadeIn 0.8s ease-out 0.4s backwards;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .education__title {
+        font-size: 48px;
+    }
+    
+    #education .services__group {
+        gap: 30px;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    #education {
+        padding: 80px 0;
+    }
+    
+    .education__title {
+        font-size: 42px;
+    }
+    
+    #education .services__group {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .education__title {
+        font-size: 36px;
+    }
+    
+    .education__subtitle {
+        font-size: 16px;
+    }
+    
+    #education .services__group {
+        gap: 25px;
     }
 }

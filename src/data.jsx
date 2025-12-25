@@ -60,7 +60,11 @@ import {
   movie,
   music,
   coding,
-  goat
+  goat,
+  wakeforest,
+  columbia,
+  kas,
+  uw
 } from "./assets";
 import { BiBasket } from "react-icons/bi";
 
@@ -74,58 +78,72 @@ export const menu = [
 
 export const services = [
   {
-    title: "University of Washington",
-    icon: <FaPaintBrush />,
-    color: "blueviolet",
-    colorRGB: "138, 43, 226",
-    description: `September 2024 - present`,
-    description2:`B.S. Inforamtics & Statistics Minor `,
+    title: "Columbia University",
+    icon: columbia,
+    color: "rgb(75, 150, 210)",
+    colorRGB: "75, 150, 210",
+    description: `January 2026 - May 2027`,
+    description2: `M.S. Computer Science`,
     courses:`Courseworks `,
     course_list: [
-      "- Data Structures & Algorithms", 
-      "- Databases & Data Modeling", 
-      "- Foundational Skills for Data Science", 
-      "- Statistical Methods in Engineering",
-      "- Information Systems Management",  
-      "- Client Side Development", 
-      "- Probability",
-      "- Design Methods",
-      "- Calculas III"
+      "Operating Systems",
+      "Advanved System Programming",
+      "Analysis of Algorithms"
+    ]
+  },
+  {
+    title: "University of Washington",
+    icon: uw,
+    color: "blueviolet",
+    colorRGB: "138, 43, 226",
+    description: `September 2024 - December 2025`,
+    description2:`B.S. Inforamtics & Data Science Minor `,
+    courses:`Courseworks `,
+    course_list: [
+      "Data Structures & Algorithms", 
+      "Database Systems", 
+      "Artificial Intetlligence", 
+      "Client/Server Side Development",
+      "Data Programming",  
+      "Databases and Data Modeling", 
+      "Linear Algebra",
+      "Diferential Equations"
   ]
   },
   {
     title: "Wake Forest University",
-    icon: <FaCodeCompare />,
+    icon: wakeforest,
+    color: "rgb(218, 165, 32)",
+    colorRGB: "218, 165, 32",
     description: `August 2022 - May 2024`,
-    description2:`B.S. Computer Science `,
+    description2:`Computer Science (Transfered)`,
     courses:`Courseworks `,
     course_list: [
-      "- Computer Systems",
-      "- Foundementals of Computer Science", 
-      "- High Performace Computing", 
-      "- Discrete Mathematics", 
-      "- Game Theory",
-      "- Engineering Computation Design",
-      "- Calculas I & II",  
-      "- Physics I & II", 
+      "Computer Systems",
+      "Foundementals of Computer Science", 
+      "High Performace Computing", 
+      "Discrete Mathematics", 
+      "Engineering Computation Design",
+      "Calculas I & II",  
+      "Physics I & II", 
   ]
   },
   {
     title: "Kaohsiung American School",
-    icon: <GiIdea />,
-    color: "var(--color-success)",
-    colorRGB: "var(--color-success-rgb)",
+    icon: kas,
+    color: "rgb(220, 38, 38)",
+    colorRGB: "220, 38, 38",
     description: `August 2018 - May 2022`,
     description2:`High School & IB Diploma `,
     courses:`Courseworks `,
     course_list: [
-      "- IB Mathematics A&I HL", 
-      "- IB Physics HL", 
-      "- IB English Lang & Lit HL", 
-      "- IB Economics SL",
-      "- IB Business Management SL",  
-      "- IB Spanish SL", 
-      "- Theory of Knowledge"
+      "IB Mathematics A&I HL", 
+      "IB Physics HL", 
+      "IB English Lang & Lit HL", 
+      "IB Economics SL",
+      "IB Business Management SL",  
+      "IB Spanish SL", 
+      "Theory of Knowledge"
   ]
   },
 ];

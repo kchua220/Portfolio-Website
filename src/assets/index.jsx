@@ -63,3 +63,10 @@ export { default as movie } from "./icons/movie.png";
 export { default as music } from "./icons/music.png";
 export { default as coding } from "./icons/coding.png";
 export { default as goat } from "./icons/goat.avif";
+
+
+// school
+export { default as wakeforest } from "./wfu.png";
+export { default as columbia } from "./columbia.png";
+export { default as uw } from "./uw.png";
+export { default as kas } from "./kas.webp";

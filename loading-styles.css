@@ -1,199 +1,242 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Loading Screen */
 #loading-screen {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #070707;
+  background: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0a 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   z-index: 9999;
   transition: opacity 1s ease-in-out;
+  overflow: hidden;
 }
 
-/* Loading Animation Body - Shift Left */
-.loading-body {
-  position: absolute;
-  top: 50%;
-  left: 45%; /* Move left (originally 50%) */
-  transform: translate(-50%, -50%);
-  animation: speeder 0.4s linear infinite;
-}
-
-.loading-body > span {
-  height: 5px;
-  width: 35px;
-  background: #fcfbfb;
-  position: absolute;
-  top: -19px;
-  left: 60px;
-  border-radius: 2px 10px 1px 0;
-}
-
-/* Base (Superman's Cape & Triangle Body) - Shift Left */
-.loading-base span {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-right: 100px solid #fdfbfb;
-  border-bottom: 6px solid transparent;
-  left: -5px; /* Adjusted left */
-}
-
-.loading-base span:before {
-  content: "";
-  height: 22px;
-  width: 22px;
-  border-radius: 50%;
-  background: #fcfbfb;
-  position: absolute;
-  right: -115px; /* Move left */
-  top: -16px;
-}
-
-.loading-base span:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 0 solid transparent;
-  border-right: 55px solid #f6f5f5;
-  border-bottom: 16px solid transparent;
-  top: -16px;
-  right: -103px; /* Move left */
-}
-
-/* Face (Superman Head) - Shift Left */
-.loading-face {
-  position: absolute;
-  height: 12px;
-  width: 20px;
-  background: #fefcfc;
-  border-radius: 20px 20px 0 0;
-  right: -130px; /* Move left */
-  top: -15px;
-  transform: rotate(-40deg);
-}
-
-.loading-face:after {
-  content: "";
-  height: 12px;
-  width: 12px;
-  background: #fbfbfb;
-  position: absolute;
-  right: 4px;
-  top: 7px;
-  transform: rotate(40deg);
-  transform-origin: 50% 50%;
-  border-radius: 0 0 0 2px;
-}
-
-/* Loader Motion Effects */
-.loading-body > span > span:nth-child(1),
-.loading-body > span > span:nth-child(2),
-.loading-body > span > span:nth-child(3),
-.loading-body > span > span:nth-child(4) {
-  width: 30px;
-  height: 1px;
-  background: #fafafa;
-  position: absolute;
-  animation: fazer1 0.2s linear infinite;
-}
-
-.loading-body > span > span:nth-child(2) {
-  top: 3px;
-  animation: fazer2 0.4s linear infinite;
-}
-
-.loading-body > span > span:nth-child(3) {
-  top: 1px;
-  animation: fazer3 0.4s linear infinite;
-  animation-delay: -1s;
-}
-
-.loading-body > span > span:nth-child(4) {
-  top: 4px;
-  animation: fazer4 1s linear infinite;
-  animation-delay: -1s;
-}
-
-/* Animation Keyframes */
-@keyframes fazer1 {
-  0% { left: 0; opacity: 1; }
-  100% { left: -80px; opacity: 0; }
-}
-
-@keyframes fazer2 {
-  0% { left: 0; opacity: 1; }
-  100% { left: -100px; opacity: 0; }
-}
-
-@keyframes fazer3 {
-  0% { left: 0; opacity: 1; }
-  100% { left: -50px; opacity: 0; }
-}
-
-@keyframes fazer4 {
-  0% { left: 0; opacity: 1; }
-  100% { left: -150px; opacity: 0; }
-}
-
-/* Superman Shaking Motion */
-@keyframes speeder {
-  0% { transform: translate(2px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -3px) rotate(-1deg); }
-  20% { transform: translate(-2px, 0px) rotate(1deg); }
-  30% { transform: translate(1px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 3px) rotate(-1deg); }
-  60% { transform: translate(-1px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-2px, -1px) rotate(1deg); }
-  90% { transform: translate(2px, 1px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-/* Speed Lines */
-.loading-longfazers {
+/* Floating Crystals Background */
+.crystal-bg {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
-.loading-longfazers span {
+.crystal {
   position: absolute;
-  height: 2px;
-  width: 20%;
-  background: #72e0df;
-  animation: longfazers-animation 1s linear infinite;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(102, 126, 234, 0.15),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  animation: floatCrystal 15s ease-in-out infinite;
 }
 
-.loading-longfazers span:nth-child(1) {
-  top: 20%;
-  animation-delay: -0.5s;
+.crystal1 {
+  top: 10%;
+  left: 10%;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation-delay: 0s;
 }
 
-.loading-longfazers span:nth-child(2) {
-  top: 40%;
-  animation-delay: -1s;
-}
-
-.loading-longfazers span:nth-child(3) {
+.crystal2 {
   top: 60%;
-  animation-delay: -1.5s;
+  right: 15%;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  animation-delay: -5s;
+  width: 120px;
+  height: 120px;
 }
 
-.loading-longfazers span:nth-child(4) {
-  top: 80%;
-  animation-delay: -2s;
+.crystal3 {
+  bottom: 15%;
+  left: 20%;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  animation-delay: -10s;
+  width: 100px;
+  height: 100px;
 }
 
-/* Speed Line Animations */
-@keyframes longfazers-animation {
-  0% { left: 200%; opacity: 1; }
-  100% { left: -200%; opacity: 0; }
+.crystal4 {
+  top: 20%;
+  right: 25%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation-delay: -7s;
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes floatCrystal {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+/* Loading Content */
+.loading-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Liquid Blob Container */
+.blob-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Liquid Blob */
+.blob {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.6), rgba(118, 75, 162, 0.6));
+  backdrop-filter: blur(10px);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  position: relative;
+  filter: blur(3px);
+  box-shadow: 
+    0 0 40px rgba(102, 126, 234, 0.5),
+    0 0 80px rgba(118, 75, 162, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: morphBlob 4s ease-in-out infinite;
+}
+
+.blob::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  border-radius: inherit;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes morphBlob {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    border-radius: 50% 50% 40% 60% / 50% 60% 40% 50%;
+    transform: rotate(180deg) scale(0.95);
+  }
+  75% {
+    border-radius: 30% 70% 60% 40% / 40% 60% 50% 60%;
+    transform: rotate(270deg) scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.15);
+  }
+}
+
+/* Loading Bar */
+.loading-bar-container {
+  width: 280px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 10px rgba(102, 126, 234, 0.2),
+    inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.loading-bar {
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(102, 126, 234, 0.8) 0%, 
+    rgba(118, 75, 162, 0.8) 100%
+  );
+  border-radius: 10px;
+  animation: loadProgress 1.5s ease-in-out forwards;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+}
+
+@keyframes loadProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Loading Message */
+.loading-message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 40px 50px;
+    gap: 30px;
+  }
+
+  .blob-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .blob {
+    width: 80px;
+    height: 80px;
+  }
+
+  .loading-bar-container {
+    width: 220px;
+  }
+
+  .loading-message {
+    font-size: 11px;
+  }
+
+  .crystal {
+    width: 100px !important;
+    height: 100px !important;
+  }
 }

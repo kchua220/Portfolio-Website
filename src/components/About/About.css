@@ -1,95 +1,505 @@
-#about{
+#about {
     position: relative;
-    margin-top: 60px;
+    padding: 120px 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #08080d 0%, #0d0d15 50%, #08080d 100%);
 }
 
-#about .section__wrapper{
-    display: grid;
-    grid-template-columns: 300px auto;
-    gap: 40px;
-    border-radius: 20px;
-    position: relative;
-}
-
-#about .hole{
+/* Animated Background Stars */
+.about__background {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.gradient__orb {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.gradient__orb--1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.gradient__orb--2 {
+    top: 60%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.gradient__orb--3 {
+    bottom: 30%;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+/* Add more stars dynamically */
+.gradient__orb::before,
+.gradient__orb::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+.gradient__orb::before {
     top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-#about .column{
-    position:relative;
-}
-#about .right-column{
-    padding: 100px 0px;
-}
-#about .skill__title{
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-#about .skills__container{
-    max-width: 300px;
-    margin: auto;
-    position: relative;
-    z-index: 2;
-}
-#about .skill__group{
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-#about .skill{
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    margin: 2px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    background: rgba(var(--color-primary-rgb),0.3);
-    box-shadow: var(--card-primary-shadow);
-    transform: rotate(-45deg);
-    transition: transform 0.3s ease-in-out, scale 0.4s ease-in-out; 
-}
-#about .skill:hover {
-   z-index: 1;
-   transform: rotate(0deg) scale(2);
+    left: 150px;
+    animation: twinkle 4s ease-in-out infinite;
 }
 
-#about .skill__logo {
-    width: 30px;
-    height: 30px;
-}
-#about .skill__logo > img{
-    object-fit: contain;
-    filter: grayscale(100%);
-    filter: grayscale(1);
+.gradient__orb::after {
+    top: 80px;
+    left: -200px;
+    animation: twinkle 5s ease-in-out infinite;
 }
 
-#about .card__ui-item{
-    max-width: 200px;
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+.about__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.about__header {
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+
+.about__title {
+    font-size: 56px;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #a8b8ff 50%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    animation: fadeInUp 0.8s ease-out;
+    letter-spacing: -1px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Grid */
+.about__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Bio Section */
+.bio__section {
+    width: 100%;
+}
+
+.bio__description {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 140px;
+}
+
+/* Animated Meteor Border */
+.bio__description::before {
+    content: '';
     position: absolute;
-    bottom: -50px;
-    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 40%,
+        rgba(102, 126, 234, 0.8) 50%,
+        rgba(168, 184, 255, 1) 55%,
+        rgba(102, 126, 234, 0.8) 60%,
+        transparent 70%,
+        transparent 100%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: meteorBorder 3s linear infinite;
+    background-size: 200% 100%;
 }
 
-@media (max-width:768px){
-    #about .section__wrapper{
-        grid-template-columns: 100%;
-        gap:20px;
+@keyframes meteorBorder {
+    0% {
+        background-position: -200% 0;
     }
-    #about .left-column{
-        padding-top: 120px;
-    }
-    #about .right-column{
-        padding: 0px;
-        padding-bottom: 40px;
+    100% {
+        background-position: 200% 0;
     }
 }
-.yay {
-    color: #ad3ee8; /* Example color */
-    font-weight: bold;
-    text-shadow: 0px 0px 10px rgba(216, 225, 153, 0.8);
-    font-size: 35px;
+
+.bio__description p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hobbies Section */
+.hobbies__section {
+    width: 100%;
+}
+
+.hobbies__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    max-width: 1100px;
+    margin: 0 auto;
+    perspective: 1200px;
+    padding: 20px;
+}
+
+.hobby__card {
+    background: rgba(10, 10, 15, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(102, 126, 234, 0.15);
+    width: 90px;
+    height: 90px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    transform: rotate(45deg);
+    animation: cardEntry 0.8s ease-out backwards;
+    border-radius: 40px;
+}
+
+/* Zigzag pattern - alternating up and down */
+.hobby__card:nth-child(1),
+.hobby__card:nth-child(3),
+.hobby__card:nth-child(5),
+.hobby__card:nth-child(7) {
+    transform: rotate(45deg) translateY(-40px);
+}
+
+.hobby__card:nth-child(2),
+.hobby__card:nth-child(4),
+.hobby__card:nth-child(6),
+.hobby__card:nth-child(8) {
+    transform: rotate(45deg) translateY(40px);
+}
+
+@keyframes cardEntry {
+    from {
+        opacity: 0;
+        transform: rotate(45deg) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+/* Animated gradient background */
+.hobby__card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(102, 126, 234, 0.1) 0%,
+        rgba(118, 75, 162, 0.1) 50%,
+        rgba(88, 166, 255, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.hobby__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.6) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    filter: blur(25px);
+}
+
+.hobby__card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        135deg,
+        rgba(102, 126, 234, 0.6),
+        rgba(168, 184, 255, 0.8),
+        rgba(118, 75, 162, 0.6)
+    );
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.hobby__card:hover::before,
+.hobby__card.active::before {
+    opacity: 1;
+    animation: rotateBorder 3s linear infinite;
+}
+
+@keyframes rotateBorder {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.hobby__card:hover::after,
+.hobby__card.active::after {
+    opacity: 1;
+}
+
+.hobby__card:hover .hobby__glow,
+.hobby__card.active .hobby__glow {
+    opacity: 1;
+}
+
+.hobby__card:hover,
+.hobby__card.active {
+    transform: rotate(45deg) scale(1.2);
+    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.6),
+                0 0 100px rgba(102, 126, 234, 0.4),
+                inset 0 0 30px rgba(102, 126, 234, 0.2);
+    z-index: 10;
+    border-color: rgba(168, 184, 255, 0.6);
+}
+
+.hobby__card:nth-child(1):hover,
+.hobby__card:nth-child(3):hover,
+.hobby__card:nth-child(5):hover,
+.hobby__card:nth-child(7):hover,
+.hobby__card:nth-child(1).active,
+.hobby__card:nth-child(3).active,
+.hobby__card:nth-child(5).active,
+.hobby__card:nth-child(7).active {
+    transform: rotate(45deg) scale(1.2) translateY(-40px);
+}
+
+.hobby__card:nth-child(2):hover,
+.hobby__card:nth-child(4):hover,
+.hobby__card:nth-child(6):hover,
+.hobby__card:nth-child(8):hover,
+.hobby__card:nth-child(2).active,
+.hobby__card:nth-child(4).active,
+.hobby__card:nth-child(6).active,
+.hobby__card:nth-child(8).active {
+    transform: rotate(45deg) scale(1.2) translateY(40px);
+}
+
+.hobby__icon__wrapper {
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hobby__card:hover .hobby__icon__wrapper,
+.hobby__card.active .hobby__icon__wrapper {
+    transform: rotate(-45deg) scale(1.25);
+}
+
+.hobby__icon__wrapper img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.3) drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hobby__card:hover .hobby__icon__wrapper img,
+.hobby__card.active .hobby__icon__wrapper img {
+    filter: grayscale(100%) brightness(1.1) drop-shadow(0 0 25px rgba(102, 126, 234, 1));
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about__title {
+        font-size: 48px;
+    }
+
+    .hobbies__container {
+        max-width: 900px;
+    }
+
+    .hobby__card {
+        width: 100px;
+        height: 100px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 80px 0;
+    }
+
+    .about__container {
+        padding: 0 20px;
+    }
+
+    .about__header {
+        margin-bottom: 40px;
+    }
+
+    .about__title {
+        font-size: 40px;
+    }
+
+    .bio__description {
+        padding: 30px 25px;
+    }
+
+    .bio__description p {
+        font-size: 16px;
+    }
+
+    .hobbies__container {
+        gap: 10px;
+        max-width: 700px;
+        flex-wrap: wrap;
+    }
+
+    .hobby__card {
+        width: 80px;
+        height: 80px;
+        margin: 0 10px;
+    }
+
+    .hobby__card:nth-child(1),
+    .hobby__card:nth-child(3),
+    .hobby__card:nth-child(5),
+    .hobby__card:nth-child(7) {
+        transform: rotate(45deg) translateY(-30px);
+    }
+
+    .hobby__card:nth-child(2),
+    .hobby__card:nth-child(4),
+    .hobby__card:nth-child(6),
+    .hobby__card:nth-child(8) {
+        transform: rotate(45deg) translateY(30px);
+    }
+
+    .hobby__card:nth-child(1):hover,
+    .hobby__card:nth-child(3):hover,
+    .hobby__card:nth-child(5):hover,
+    .hobby__card:nth-child(7):hover,
+    .hobby__card:nth-child(1).active,
+    .hobby__card:nth-child(3).active,
+    .hobby__card:nth-child(5).active,
+    .hobby__card:nth-child(7).active {
+        transform: rotate(45deg) scale(1.2) translateY(-30px);
+    }
+
+    .hobby__card:nth-child(2):hover,
+    .hobby__card:nth-child(4):hover,
+    .hobby__card:nth-child(6):hover,
+    .hobby__card:nth-child(8):hover,
+    .hobby__card:nth-child(2).active,
+    .hobby__card:nth-child(4).active,
+    .hobby__card:nth-child(6).active,
+    .hobby__card:nth-child(8).active {
+        transform: rotate(45deg) scale(1.2) translateY(30px);
+    }
+
+    .hobby__icon__wrapper img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__title {
+        font-size: 32px;
+    }
+
+    .hobbies__container {
+        gap: 8px;
+        max-width: 600px;
+    }
+
+    .hobby__card {
+        width: 70px;
+        height: 70px;
+        margin: 0 8px;
+    }
+
+    .hobby__icon__wrapper img {
+        width: 28px;
+        height: 28px;
+    }
 }

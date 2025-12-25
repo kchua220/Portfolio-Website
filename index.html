@@ -26,24 +26,24 @@
   <body>
     <!-- Loading Screen -->
     <div id="loading-screen">
-      <div class="loading-body">
-        <span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <div class="loading-base">
-          <span></span>
-          <div class="loading-face"></div>
-        </div>
+      <!-- Animated Background -->
+      <div class="crystal-bg">
+        <div class="crystal crystal1"></div>
+        <div class="crystal crystal2"></div>
+        <div class="crystal crystal3"></div>
+        <div class="crystal crystal4"></div>
       </div>
-
-      <div class="loading-longfazers">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      
+      <div class="loading-content">
+        <div class="blob-container">
+          <div class="blob"></div>
+        </div>
+        
+        <div class="loading-bar-container">
+          <div class="loading-bar"></div>
+        </div>
+        
+        <p class="loading-message">Loading...</p>
       </div>
     </div>
 
@@ -55,16 +55,14 @@
         const loadingScreen = document.getElementById("loading-screen");
         const rootDiv = document.getElementById("root");
     
-        // Start fade-out for loading screen and fade-in for React app
         setTimeout(() => {
-          loadingScreen.style.opacity = "0"; // Smooth fade-out
-          rootDiv.style.opacity = "1"; // Smooth fade-in (overlap starts here)
-        }, 1500); // Delay of 1.5s before starting the transition
+          loadingScreen.style.opacity = "0";
+          rootDiv.style.opacity = "1";
+        }, 1200);
     
-        // Completely remove loading screen after fade-out ends
         setTimeout(() => {
           loadingScreen.style.display = "none";
-        }, 3000); // Allow 1.5s for the opacity transition to finish
+        }, 2200);
       };
     </script>
 

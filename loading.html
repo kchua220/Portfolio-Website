@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #171717">
+<html lang="en" style="background-color: #0a0a0a">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loading Screen</title>
+    <title>Loading...</title>
     <link rel="stylesheet" href="/loading-styles.css" />
   </head>
   <body>
-    <!-- Loading Screen Content -->
     <div id="loading-screen">
-      <div class="loading-body">
-        <span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <div class="loading-base">
-          <span></span>
-          <div class="loading-face"></div>
+      <!-- Animated Logo/Text -->
+      <div class="loading-content">
+        <div class="logo-container">
+          <div class="loading-ring"></div>
+          <div class="loading-ring"></div>
+          <div class="loading-ring"></div>
+          <span class="loading-text">KC</span>
         </div>
+        
+        <div class="loading-bar-container">
+          <div class="loading-bar"></div>
+        </div>
+        
+        <p class="loading-message">Loading Experience...</p>
       </div>
 
-      <div class="loading-longfazers">
+      <!-- Particle Background -->
+      <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -32,10 +39,9 @@
     </div>
 
     <script>
-      // Redirect to the main index.html after the loading animation
       setTimeout(() => {
-        window.location.href = "/index.html"; 
-      }, 2000); 
+        window.location.href = "/index.html";
+      }, 1500);
     </script>
   </body>
 </html>

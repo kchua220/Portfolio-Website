@@ -298,32 +298,7 @@ export const projects = [
     ],
   },
   {
-    title: "Music Recommendation System",
-    image: project3,
-    category: "Individual Project",
-    description: `In Progress~~   Goal: To develop a Music Recommendation System using the Spotify dataset from Kaggle while leveraging data analysis and visualization. By analyzing user listening history and features like acousticness, danceability, energy, and valence, the system predicts tracks tailored to individual preferences. Implemented diverse machine learning algorithms for content-based recommendations, ensuring high precision and recall. Scalable to handle large datasets, the system continuously improves by learning from user interactions. Utilized data analysis and visualization tools to explore user behavior and song popularity, informing the recommendation engine and enhancing the user experience.`,
-    demoLink: "",
-    stacks: [
-      {
-        name: "Python",
-        logo: python,
-      },
-      {
-        name: "Pandas",
-        logo: pandas,
-      },
-      {
-        name: "Numpy",
-        logo: numpy,
-      },
-      {
-        name: "Matplotlib",
-        logo: matplotlib,
-      },
-    ],
-  },
-  {
-    title: "Global Suicide Trends: Gender Disparities and Insights (INFO 201)",
+    title: "Transit Buddy System",
     image: project4,
     category: "Group Project",
     description: `This analysis explores global suicide trends through comprehensive data-driven insights, focusing on gender disparities, country-specific patterns, and socio-economic influences. Using datasets from the World Health Organization (WHO), statistical techniques and interactive visualizations were applied with tools such as R, ggplot2, dplyr, and Plotly. The findings highlight key factors shaping suicide rates and aim to support targeted mental health interventions, emphasizing the importance of data-driven strategies in policymaking.`,
@@ -344,24 +319,7 @@ export const projects = [
     ],
   },
   {
-    title: "Global Pathways - OPT/CPT Made Easy (INFO 200)",
-    image: project5,
-    category: "Group Project",
-    description: `Navigating the complexities of OPT (Optional Practical Training) and CPT (Curricular Practical Training) can be overwhelming for international students, often leaving them at a disadvantage in the job market. To bridge this gap, an interactive and customizable Notion template was developed, featuring job application trackers, networking tools, OPT/CPT checklists, educational resources, and a Mandarin translation page. This all-in-one platform streamlines the internship search process, providing tailored support and enhancing accessibility for international students seeking opportunities in the U.S.`,
-    demoLink: "",
-    stacks: [
-      {
-        name: "Notion",
-        logo: notion,
-      },
-      {
-        name: "Figma",
-        logo: figma,
-      },
-    ],
-  },
-  {
-    title: "Portfolio Website",
+    title: "K-Row GameBot",
     image: project6,
     category: "Individual Project",
     description: `Built a modern, responsive portfolio website using React.js, designed for developers and designers looking to showcase their work professionally. Implemented light and dark mode for an enhanced user experience and created interactive components to highlight skills, projects, and services. The site features smooth page transitions and a sleek, visually appealing layout, optimized for both desktop and mobile viewing. With a focus on user-friendly navigation and industry best practices, this portfolio is crafted to stand out in the tech world.`,

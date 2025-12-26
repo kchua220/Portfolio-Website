@@ -23,6 +23,8 @@ const ProjectCard = ({ title, image, category, description, demoLink, stacks, in
             className="project__card" 
             onClick={handleClick}
             onMouseMove={handleMouseMove}
+            data-aos="flip-up"
+            data-aos-delay={index * 100}
         >
             {/* Spotlight Effect */}
             <div 
@@ -56,13 +58,13 @@ const ProjectCard = ({ title, image, category, description, demoLink, stacks, in
             
             {/* Content Section */}
             <div className="project__content">
-            <div className="project__header">
-                <h3 className="project__name">
-                    {title}
-                    <span className="title__glow"></span>
-                </h3>
-            </div>
-                        
+                <div className="project__header">
+                    <h3 className="project__name">
+                        {title}
+                        <span className="title__glow"></span>
+                    </h3>
+                </div>
+                
                 {/* Tech Stack with Glow */}
                 <div className="project__tech-section">
                     <div className="project__tech-preview">

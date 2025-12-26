@@ -92,7 +92,7 @@
 .education__title {
     font-size: 56px;
     font-weight: 800;
-    margin-bottom: 15px;
+    margin-bottom: -10px;
     background: linear-gradient(135deg, #ffffff 0%, #a8b8ff 50%, #667eea 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -29,6 +31,16 @@ const HomePage = ({ onNavigate }) => {
 const App = () => {
   const [showTransition, setShowTransition] = useState(false);
   const [pendingNavigation, setPendingNavigation] = useState(null);
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
   const handleNavigate = (navigateFunction) => {
     setShowTransition(true);

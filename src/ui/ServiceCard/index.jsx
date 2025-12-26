@@ -2,7 +2,12 @@ import "./ServiceCard.css"
 
 const ServiceCard = ({title, description, description2, courses, course_list, icon, color, colorRGB, index}) => {
     return (
-        <div className="service__card" style={{"--color-primary":color, "--color-primary-rgb":colorRGB}}>
+        <div 
+            className="service__card" 
+            style={{"--color-primary":color, "--color-primary-rgb":colorRGB}}
+            data-aos="fade-up"
+            data-aos-delay={index * 150}
+        >
             {/* Gradient Background */}
             <div className="card__gradient"></div>
             

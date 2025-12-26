@@ -230,7 +230,7 @@
 .project__category {
     font-size: 8px;
     font-weight: 700;
-    color: rgb(155, 157, 165);
+    color: rgba(102, 126, 234, 1);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     padding: 6px 14px;

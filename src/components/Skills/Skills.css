@@ -1,29 +1,157 @@
-#skill .skill__container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+#skill {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    background: linear-gradient(180deg, 
+        #0a0a12 0%,
+        #12121d 30%,
+        #0f0f1a 70%,
+        #0a0a12 100%
+    );
 }
 
-@media (max-width:1024px){
-    #skill .skill__container{
-        grid-template-columns: 100%;
+/* Animated Background */
+.skill__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Twinkling stars */
+.skill__background::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(1px 1px at 30% 80%, white, transparent),
+        radial-gradient(2px 2px at 15% 90%, white, transparent),
+        radial-gradient(1px 1px at 70% 20%, white, transparent);
+    animation: starsTwinkle 4s ease-in-out infinite;
+}
+
+@keyframes starsTwinkle {
+    0%, 100% {
+        opacity: 0.5;
     }
-    #skill .skill__container .skill__card{
-        width: 80%;
-        padding: 2rem;
-        margin: 0 auto;
-    }
-    #skill .skill__content{
-        padding: 1rem;
+    50% {
+        opacity: 1;
     }
 }
 
-@media (max-width: 600px){
+/* Nebula glow */
+.skill__background::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 20%;
+    right: -10%;
+    background: radial-gradient(circle, 
+        rgba(138, 43, 226, 0.15) 0%,
+        rgba(102, 126, 234, 0.1) 30%,
+        transparent 70%
+    );
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: nebulaPulse 10s ease-in-out infinite;
+}
+
+@keyframes nebulaPulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.2);
+    }
+}
+
+/* Section Header */
+.section__header {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.skill__title {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #a8b8ff 50%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    text-shadow: none;
+}
+
+.skill__subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Skills Container - Random absolute positioning */
+#skill .skill__container {
+    position: relative;
+    max-width: 1400px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 0 40px;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .skill__title {
+        font-size: 48px;
+    }
+
     #skill .skill__container {
-        gap: 1rem;
+        padding: 0 30px;
+        height: 450px;
     }
-    #skill .skill__container .skill__card{
-        width: 100%;
-        padding: 2rem 1rem;
+}
+
+@media (max-width: 1024px) {
+    #skill {
+        padding: 80px 0;
+    }
+
+    .skill__title {
+        font-size: 42px;
+    }
+
+    #skill .skill__container {
+        padding: 0 20px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skill__title {
+        font-size: 36px;
+    }
+
+    .skill__subtitle {
+        font-size: 16px;
+    }
+
+    #skill .skill__container {
+        height: 350px;
     }
 }

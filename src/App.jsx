@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -14,13 +14,29 @@ import ProjectPage from "./components/Projects/ProjectPage";
 import PortalTransition from "./components/Projects/PortalTransition";
 
 const HomePage = ({ onNavigate }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to projects section when coming back from project page
+    if (location.state?.scrollTo === 'projects') {
+      setTimeout(() => {
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+          projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar />
       <Header />
       <About />
       <Services />
-      <Projects onNavigate={onNavigate} />
+      <section id="projects">
+        <Projects onNavigate={onNavigate} />
+      </section>
       <Testimonials />
       <Skills />
       <Footer />  

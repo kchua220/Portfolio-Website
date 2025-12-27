@@ -107,13 +107,31 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: rgba(var(--color-primary-rgb), 0.15);
     border: 1px solid rgba(var(--color-primary-rgb), 0.3);
     border-radius: 12px;
     margin-bottom: 10px;
     transition: all 0.4s ease;
+}
+
+/* Fix for oversized logos - especially UW */
+.school__badge img,
+.service__card img {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain;
+}
+
+/* Target UW logo specifically if it has unique attributes */
+img[alt*="Washington"],
+img[alt*="UW"],
+img[src*="uw"],
+img[src*="washington"] {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain;
 }
 
 .badge__number {

@@ -5,7 +5,7 @@ export { default as profile4 } from "./e-castle.png";
 export { default as profile5 } from "./brogent.jpg";
 export { default as profile6 } from "./wfu.png";
 
-//Projects images export
+//Project//
 export { default as project1 } from "./svai.png";
 export { default as project2 } from "./food.png";
 export { default as project3 } from "./musicsystem.webp";
@@ -14,6 +14,10 @@ export { default as project5 } from "./pg.png";
 export { default as project6 } from "./portfolio.jpg";
 export { default as project7 } from "./pc.png";
 export { default as project8 } from "./cg.png";
+export { default as cardgenius } from "./creditcard.jpg";
+export { default as soccervisionAI } from "./soccer.avif";
+export { default as transitbuddy } from "./transitbuddy.jpg";
+export { default as gamebot } from "./gamebot.jpg";
 
 //Icons export
 export { default as figma } from "./icons/figma.svg";

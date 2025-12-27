@@ -64,7 +64,11 @@ import {
   wakeforest,
   columbia,
   kas,
-  uw
+  uw, 
+  cardgenius,
+  soccervisionAI,
+  transitbuddy,
+  gamebot
 } from "./assets";
 import { BiBasket } from "react-icons/bi";
 
@@ -193,7 +197,7 @@ export const projects = [
     category: "Group Project",
     description: `Engineered a Chrome extension that delivers real-time feedback on AI prompts for 200+ beta users, analyzing tone and emotion to improve prompt effectiveness. Trained DistilBERT and Random Forest ensemble on 50,000+ labeled prompts, achieving 92% emotion classification accuracy, optimizing hyperparameters and deploying via Flask API with Express server handling <200ms response time. Collected user feedback through A/B testing, achieving 37% improvement in prompt quality'
 `,
-    demoLink: "https://github.com/kchua220/AI-Powered-Soccer-Analytics-System",
+    demoLink: "https://github.com/kchua220/",
     stacks: [
       {
         name: "Python",
@@ -220,11 +224,11 @@ export const projects = [
   },
   {
     title: "CardGenius",
-    image: project8,
+    image: cardgenius,
     category: "Group Project",
     description: `Developed a mobile app recommending optimal credit card for maximum rewards based on merchant and spending category. Built rule-based algorithm analyzing 15+ card structures with rotating quarterly bonuses, integrated Plaid API for secure card linking and account verification, and created intuitive UI with real-time merchant lookup and cashback visualization. Demonstrated 1.8x average cashback improvement through intelligent card selection completed in DubHack hackathon'
 `,
-    demoLink: "https://github.com/kchua220/AI-Powered-Soccer-Analytics-System",
+    demoLink: "https://github.com/kchua220/",
     stacks: [
       {
         name: "Python",
@@ -251,7 +255,7 @@ export const projects = [
   },
   {
     title: "SoccerVision AI",
-    image: project1,
+    image: soccervisionAI,
     category: "Individual Project",
     description: `Self-initiated an AI-powered soccer analytics system using machine learning with PyTorch and OpenCV, achieving 96.2% accuracy in detecting players, referees, and soccer balls in real-time game scenarios. Fine-tuned a YOLOv8 model for precision tracking and applied KMeans clustering using Scikit-Learn to assign players to teams with 93.5% accuracy based on jersey colors. Leveraged computer vision techniques, including optical flow and perspective transformation, to analyze player movements and extract insights such as real-time speed, total distance covered, and camera tracking precision.
 `,
@@ -285,7 +289,7 @@ export const projects = [
     image: project2,
     category: "Individual Project",
     description: `Developed an advanced iOS app empowering indecisive users to discover meal ideas effortlessly. Allow users to set dietary preferences, cuisine types, and budgets, to explore meal suggestions through a dynamic spinning wheel. Integrated CoreML for real-time recommendation tuning, MapKit for nearby restaurant suggestions, and CoreData for user history. Built a polished interface with SwiftUI and Lottie animations for immersive visuals. Introduced a feature allowing users to access a map option seamlessly redirecting them to an external site, displaying nearby restaurants offering the selected cuisine.`,
-    demoLink: "",
+    demoLink: "https://github.com/kchua220/The-Wheel-Of-Taste",
     stacks: [
       {
         name: "Swift",
@@ -299,10 +303,10 @@ export const projects = [
   },
   {
     title: "Transit Buddy System",
-    image: project4,
+    image: transitbuddy,
     category: "Group Project",
     description: `This analysis explores global suicide trends through comprehensive data-driven insights, focusing on gender disparities, country-specific patterns, and socio-economic influences. Using datasets from the World Health Organization (WHO), statistical techniques and interactive visualizations were applied with tools such as R, ggplot2, dplyr, and Plotly. The findings highlight key factors shaping suicide rates and aim to support targeted mental health interventions, emphasizing the importance of data-driven strategies in policymaking.`,
-    demoLink: "",
+    demoLink: "https://github.com/kchua220/",
     stacks: [ 
       {
       name: "R",
@@ -320,10 +324,10 @@ export const projects = [
   },
   {
     title: "K-Row GameBot",
-    image: project6,
+    image: gamebot,
     category: "Individual Project",
     description: `Built a modern, responsive portfolio website using React.js, designed for developers and designers looking to showcase their work professionally. Implemented light and dark mode for an enhanced user experience and created interactive components to highlight skills, projects, and services. The site features smooth page transitions and a sleek, visually appealing layout, optimized for both desktop and mobile viewing. With a focus on user-friendly navigation and industry best practices, this portfolio is crafted to stand out in the tech world.`,
-    demoLink: "",
+    demoLink: "https://github.com/kchua220",
     stacks: [
       {
         name: "HTML",

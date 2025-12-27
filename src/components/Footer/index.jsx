@@ -1,11 +1,16 @@
-
 import "./Footer.css";
 import {menu} from "../../data"
 import {Link} from "react-scroll"
 import SocialHandles from "../../ui/SocialHandles";
+
 const Footer = () => {
     return (
         <footer>
+            <div className="meteor"></div>
+            <div className="meteor"></div>
+            <div className="meteor"></div>
+            <div className="meteor"></div>
+            <div className="meteor"></div>
             <div className="section__wrapper">
                 <ul className="flex__center nav">
                     

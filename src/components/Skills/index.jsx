@@ -1,4 +1,5 @@
 import "./Skills.css";
+import "../../ui/Skillcard/SkillCard.css";
 import { skills } from "../../data"
 
 const Skills = () => {
@@ -10,8 +11,8 @@ const Skills = () => {
                 <div className="skill__orb skill__orb--3"></div>
             </div>
 
-            <div className="section__wrapper">
-                <div className="section__header">
+            <div className="skill__wrapper">
+                <div className="skill__header">
                     <h2 className="shine skill__title" data-aos="fade-down">Skills</h2>
                 </div>
                 <div className="skill__container">

@@ -1,40 +1,14 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import { projects } from '../../data';
 import './ProjectPage.css';
 
 const ProjectPage = ({ onNavigate }) => {
   const { projectId } = useParams();
   const navigate = useNavigate();
-  const [showButton, setShowButton] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   
   const project = projects.find((p) => 
     p.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === projectId
   );
-
-  // Scroll handler to hide/show GitHub button
-  useEffect(() => {
-    const overlay = document.querySelector('.project-page-overlay');
-    
-    const handleScroll = () => {
-      const currentScrollY = overlay.scrollTop;
-      
-      // Hide button when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setShowButton(false);
-      } else {
-        setShowButton(true);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    if (overlay) {
-      overlay.addEventListener('scroll', handleScroll);
-      return () => overlay.removeEventListener('scroll', handleScroll);
-    }
-  }, [lastScrollY]);
 
   if (!project) {
     return (
@@ -56,26 +30,23 @@ const ProjectPage = ({ onNavigate }) => {
   };
 
   return (
-    <>
-      {/* GitHub button - outside overlay so fixed position works */}
+    <div className="project-page-overlay">
+      <button className="back-button" onClick={handleBack}>
+        <span>←</span> Back
+      </button>
+
+      {/* GitHub button - always fixed top right */}
       {project.demoLink && (
-        <div className={`project-links ${showButton ? 'visible' : 'hidden'}`}>
-          <a 
-            href={project.demoLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="demo-link"
-          >
-            View on GitHub →
-          </a>
-        </div>
+        <a 
+          href={project.demoLink} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="github-link-fixed"
+        >
+          View on GitHub →
+        </a>
       )}
 
-      <div className="project-page-overlay">
-        <button className="back-button" onClick={handleBack}>
-          <span>←</span> Back
-        </button>
-      
       <div className="project-card-popup">
         <div className="project-header">
           <img src={project.image} alt={project.title} className="project-image" />
@@ -106,7 +77,6 @@ const ProjectPage = ({ onNavigate }) => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 

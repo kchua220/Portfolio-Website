@@ -68,7 +68,10 @@ import {
   cardgenius,
   soccervisionAI,
   transitbuddy,
-  gamebot
+  gamebot,
+  synology,
+  amgen,
+  white
 } from "./assets";
 import { BiBasket } from "react-icons/bi";
 
@@ -479,24 +482,17 @@ export const socialHandles = [
 
 export const testimonials = [
   {
-    avatar: profile2,
-    name: "Amgen",
-    review: `Software Engineer Intern`,
-    description: `July 2025- September 2025`,
-    location:`Taipei, Taiwan`
-  },
-  {
     avatar: profile5,
-    name: "Synology",
-    review: `Software Developer Intern`,
-    description: `June 2024 - August 2024`,
-    location:`New Taipei, Taiwan`
+    name: "Brogent Technology",
+    review: `Software Engineer Intern `,
+    description: `June 2022 - July 2022`,
+    location:`Kaohsiung, Taiwan`
   },
   {
     avatar: profile3,
     name: "R.O.C Army",
     review: `Obligatory Military Service`,
-    description: `May - August 2023 & 2024`,
+    description: `May 2023 - August 2023`,
     location:`Chiayi, Taiwan`
   },
   {
@@ -507,24 +503,27 @@ export const testimonials = [
     location:`Kaohsiung, Taiwan`
   },
   {
-    avatar: profile5,
-    name: "Brogent Technology",
-    review: `Software Engineer Intern `,
-    description: `June 2022 - July 2022`,
-    location:`Kaohsiung, Taiwan`
+    avatar: synology,
+    name: "Synology",
+    review: `Software Developer Intern`,
+    description: `June 2024 - August 2024`,
+    location:`New Taipei, Taiwan`
   },
   {
-    avatar: profile2,
-    name: "National Kaohsiung Center for the Arts",
-    review: `Web Developer Intern`,
-    description: `March 2021 - November 2021`,
-    location:`Kaohsiung, Taiwan`
+    avatar: amgen,
+    name: "Amgen",
+    review: `Software Engineer Intern`,
+    description: `July 2025- September 2025`,
+    location:`Taipei, Taiwan`
   },
+  
+  
   {
-    avatar: profile6,
-    name: "WFU Campus Recreation",
-    review: `Intramural Referee `,
-    description: `October 2022 - April 2024`,
-    location:`Winston-Salem, NC`
+    avatar: white,
+    name: "???",
+    review: `Internship`,
+    description: `May 2026 - August 2026`,
+    location:`???`
   },
+  
 ];

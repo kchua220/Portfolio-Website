@@ -69,8 +69,14 @@ export { default as coding } from "./icons/coding.png";
 export { default as goat } from "./icons/goat.avif";
 
 
-// school
+// education
 export { default as wakeforest } from "./wfu.png";
 export { default as columbia } from "./columbia.png";
 export { default as uw } from "./uw.png";
 export { default as kas } from "./kas.webp";
+
+
+// expereince
+export { default as synology } from "./synology.jpg";
+export { default as amgen } from "./amgen.png";
+export { default as white } from "./white.png";
